@@ -1,76 +1,82 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hadi Fouani | Portfolio</title>
-
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Hadi Fouani — AI, machine learning, and computer science. Explore my education, research, and experience.">
+  <meta name="theme-color" content="#0c1016">
+  <title>Hadi Fouani — AI & Research</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <aside class="sidebar">
+    <a class="brand" href="#home" aria-label="Hadi Fouani home">hf<span>.</span></a>
+    <p class="sidebar-caption">A PERSONAL EXPLORATION</p>
+    <nav aria-label="Main navigation">
+      <a class="nav-link active" href="#home" aria-current="location"><span aria-hidden="true">⌂</span> Overview <small>01</small></a>
+      <a class="nav-link" href="#about"><span aria-hidden="true">◎</span> About <small>02</small></a>
+      <a class="nav-link" href="#work"><span aria-hidden="true">↗</span> Selected work <small>03</small></a>
+      <a class="nav-link" href="#research"><span aria-hidden="true">∑</span> Research <small>04</small></a>
+      <a class="nav-link" href="#contact"><span aria-hidden="true">✉</span> Contact <small>05</small></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <a class="github-link" href="https://github.com/HadiFouani">Explore my GitHub <span aria-hidden="true">↗</span></a>
+      <div class="theme-controls" id="theme-controls" hidden>
+        <label for="theme-select">Appearance</label>
+        <select id="theme-select"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+      </div>
+      <p class="sidebar-note">Curiosity. Rigor. Possibility.</p>
+    </div>
+  </aside>
 
-  <h1>Hadi Fouani</h1>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="topline"><span>HADI FOUANI / PORTFOLIO</span><span class="field-label"><i></i> AI & COMPUTER SCIENCE</span></div>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">BETWEEN THEORY & APPLICATION</p>
+          <h1 id="hero-title">Hi, I'm<br><span>Hadi Fouani.</span></h1>
+          <p class="hero-role">A curious mind.<br>A computational lens.</p>
+          <p class="hero-description">Exploring artificial intelligence, machine learning, and the mathematical ideas behind them. From the foundations of computer science to questions that meet the real world.</p>
+          <div class="hero-actions"><a class="button" href="#work">Explore my work <span aria-hidden="true">↗</span></a><a class="button button--secondary" href="#contact">Let's connect <span aria-hidden="true">→</span></a></div>
+        </div>
+        <figure class="research-art" aria-label="An abstract network of connected points representing the connection between theory and application">
+          <div class="art-top"><span>FIG. 01</span><span>CONNECTED IDEAS</span></div>
+          <svg viewBox="0 0 360 380" fill="none" aria-hidden="true">
+            <defs><linearGradient id="network-color" x1="50" y1="60" x2="310" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#90b9ff"/><stop offset="1" stop-color="#6fe2c3"/></linearGradient></defs>
+            <g class="orbit-lines" stroke="currentColor" stroke-width="0.7"><ellipse cx="180" cy="190" rx="145" ry="145"/><ellipse cx="180" cy="190" rx="94" ry="145" transform="rotate(-35 180 190)"/><ellipse cx="180" cy="190" rx="58" ry="145" transform="rotate(40 180 190)"/><path d="M35 190h290M180 45v290" stroke-dasharray="3 6"/></g>
+            <g stroke="url(#network-color)" stroke-width="1.1"><path d="M83 105 165 83 259 123 287 217 230 292 129 277 68 205 83 105 230 292 165 83 68 205 259 123 129 277 83 105M68 205 287 217 165 83M129 277 287 217M259 123 230 292"/></g>
+            <g fill="url(#network-color)"><circle cx="83" cy="105" r="5"/><circle cx="165" cy="83" r="4"/><circle cx="259" cy="123" r="5"/><circle cx="287" cy="217" r="4"/><circle cx="230" cy="292" r="5"/><circle cx="129" cy="277" r="4"/><circle cx="68" cy="205" r="5"/></g>
+            <circle class="network-core" cx="180" cy="190" r="9" fill="#a3f0db"/><circle cx="180" cy="190" r="19" stroke="#a3f0db" stroke-opacity=".35"/>
+          </svg>
+          <figcaption><span>THEORY</span><span class="art-rule"></span><span>APPLICATION</span></figcaption>
+        </figure>
+      </div>
+      <div class="hero-footer"><span>Télécom Paris <b>/</b> MPRI</span><a href="#about">A little more about me <span aria-hidden="true">↓</span></a></div>
+    </section>
 
-  <p class="subtitle">
-    AI & Machine Learning | Computer Science | Research
-  </p>
+    <section class="content-section" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><p class="eyebrow">02 / THE BACKGROUND</p><h2 id="about-title">Grounded in theory.<br>Driven by curiosity.</h2></div>
+      <div class="about-grid"><p class="section-intro">I'm an engineering student at Télécom Paris, with a Master's degree in Foundations of Computer Science (MPRI). My interests sit at the intersection of AI, mathematics, and research.</p>
+      <div class="education"><article><span class="entry-label">ENGINEERING</span><h3>Télécom Paris</h3><p>Computer Science & Data Science</p></article><article><span class="entry-label">MASTER 2</span><h3>MPRI · Institut Polytechnique de Paris</h3><p>Foundations of Computer Science</p></article></div></div>
+    </section>
 
-  <p>
-    Welcome to my personal website!
-    I am an engineering student at Telecom Paris
-    with a Master's degree in Foundations of
-    Computer Science (MPRI).
-  </p>
+    <section class="content-section" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><p class="eyebrow">03 / SELECTED EXPERIENCE</p><h2 id="work-title">Ideas into exploration.</h2><p class="section-intro">A look at the work shaping how I think.</p></div>
+      <div class="work-grid"><article class="work-card"><div class="card-top"><span>01 / INDUSTRY R&D</span><span aria-hidden="true">↗</span></div><div class="work-symbol" aria-hidden="true">L<span>IA</span></div><h3>LexIA</h3><p>AI Engineer R&D at Devoteam, working on the LexIA project.</p><div class="tags"><span>Artificial intelligence</span><span>R&D</span></div></article>
+      <article class="work-card work-card--mint"><div class="card-top"><span>02 / RESEARCH</span><span aria-hidden="true">∿</span></div><div class="work-symbol" aria-hidden="true">P<span>(x)</span></div><h3>Stochastic modeling</h3><p>Research internship at INRIA, exploring stochastic modeling.</p><div class="tags"><span>Probability</span><span>Research</span></div></article></div>
+      <a class="text-link" href="https://github.com/HadiFouani">More explorations on GitHub <span aria-hidden="true">↗</span></a>
+    </section>
 
-  <h2>Education</h2>
+    <section class="content-section" id="research" aria-labelledby="research-title">
+      <div class="section-heading"><p class="eyebrow">04 / INTELLECTUAL CURIOSITY</p><h2 id="research-title">The questions behind the code.</h2></div>
+      <div class="research-list"><article><span class="research-number">01</span><div><h3>Artificial intelligence</h3><p>Intelligent systems and their connection to practical problems.</p></div><span class="research-mark" aria-hidden="true">↗</span></article><article><span class="research-number">02</span><div><h3>Machine learning</h3><p>Learning from data, with an eye on the principles underneath.</p></div><span class="research-mark" aria-hidden="true">↗</span></article><article><span class="research-number">03</span><div><h3>Foundations & probability</h3><p>The mathematical structures behind computation and uncertainty.</p></div><span class="research-mark" aria-hidden="true">↗</span></article></div>
+    </section>
 
-  <p>
-    <strong>Telecom Paris</strong><br>
-    Engineering Degree — Computer Science & Data Science
-  </p>
-
-  <p>
-    <strong>MPRI — Institut Polytechnique de Paris</strong><br>
-    Master 2 — Foundations of Computer Science
-  </p>
-
-  <h2>Experience</h2>
-
-  <p>
-    <strong>Devoteam</strong><br>
-    AI Engineer R&D — LexIA Project
-  </p>
-
-  <p>
-    <strong>INRIA</strong><br>
-    Research Intern — Stochastic Modeling
-  </p>
-
-  <h2>Projects</h2>
-  
-<h2>My Research Interests</h2>
-
-<p id="research-text">
-  Click the button to discover my interests.
-</p>
-
-<button id="discover-button">
-  Discover
-</button>
-
-  <p>
-    More projects coming soon!
-  </p>
-
-  <h2>Contact</h2>
-
-  <p>
-    <a href="https://github.com/HadiFouani">
-      GitHub Profile
-    </a>
-  </p>
-
+    <section class="content-section contact-section" id="contact" aria-labelledby="contact-title"><p class="eyebrow">05 / START A CONVERSATION</p><h2 id="contact-title">Good ideas start<br>with a <span>hello.</span></h2><p class="section-intro">Interested in AI, research, or exchanging ideas? Let's connect.</p><a class="button" href="mailto:hadifouani262@gmail.com">Say hello <span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:hadifouani262@gmail.com">hadifouani262@gmail.com</a></section>
+    <footer><span>© <span id="year">2026</span> Hadi Fouani</span><span>Always learning. Always exploring.</span><a href="#home">Back to top ↑</a></footer>
+  </main>
 </body>
 </html>
