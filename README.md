@@ -5,22 +5,43 @@ Personal portfolio for AI, machine learning, and computer science, hosted on Git
 ## Project structure
 
 ```text
-index.html     Page content, sidebar navigation, and research illustration
+index.html     Content, projects, research interests, readings, and navigation
 style.css      Responsive layout, dark/light themes, and animations
-script.js      Saved appearance, active navigation, and footer year
-assets/        Your photo, project images, and CV (see assets/README.md)
+script.js      Appearance, project filters, scroll/click motion, and navigation
+assets/        Abstract orbit logo/favicon and future images (see assets/README.md)
 ```
 
 Open `index.html` in a browser to preview locally. No build or dependencies required.
 
 The design combines a midnight-blue research notebook aesthetic, blue and mint accents,
 a connected-ideas illustration, and generous typography. Dark is the first-visit default.
-Appearance offers Dark, Light, and System and remembers the selection when storage is
+The sun, moon, and monitor buttons select Light, Dark, and System and remember the choice when storage is
 available. Set `data-theme` on `<html>` to change the first-visit default, or remove it
 to use the system preference. Saved visitor preferences take precedence.
 
 Edit content in `index.html`, theme tokens at the top of `style.css`, and interactions
 in `script.js`. Navigation follows scrolling. The layout adapts to a compact top
-navigation on mobile and respects reduced-motion preferences.
+navigation on mobile and respects reduced-motion preferences. Projects can be
+filtered by topic; native expandable details work without JavaScript. Scroll reveals,
+reading progress, click ripples, hover responses, and pointer-driven illustration
+movement are progressive enhancements. Reduced motion disables visual animation.
 
-Personal assets have not been supplied yet; no missing asset links are rendered.
+The abstract orbit symbol in `assets/logo.svg` is used for both the brand and the browser favicon.
+The contact section links only to LinkedIn; GitHub remains a code link in the sidebar.
+No email address or phone number is embedded
+in the page. The supplied CV was used for content, not copied to public assets.
+
+## Content awaiting personal details
+
+- Meme understanding: ongoing; a TODO is included for details when the project is ready.
+- Devoteam/LEXIA: AI Researcher Intern in the RESEARCH team, Future of Work axis.
+- Research interests: refine the current directions and questions to match your priorities.
+- Background: confirm current degree and employment status before changing the dates.
+
+## Edit readings
+
+Find `id="readings"` in `index.html`. Each book or paper is one clearly spaced
+`<article class="reading-entry">` block. Duplicate or delete a block to add or
+remove a reading. Edit its category, title (`<cite>`), optional author, and description
+(`p`). The six entries include your five selections and the TOL paper from your CV.
+Descriptions are brief topic labels, not claims that you finished a reading.
