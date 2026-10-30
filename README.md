@@ -14,17 +14,22 @@ assets/        Per aspera ad astra logo/favicon and future images (see assets/RE
 Open `index.html` in a browser to preview locally. No build or dependencies required.
 
 The design combines a midnight-blue research notebook aesthetic, blue and mint accents,
-a connected-ideas illustration, and generous typography. Dark is the first-visit default.
+a paired study track, three grouped interests, a compact career timeline, and generous
+typography in the overview. Dark is the first-visit default.
+The study track includes engineering degrees at Télécom Paris and USJ, plus M2/MPRI
+at IP Paris. The career timeline shows the internship start years: 2023, 2026, 2026.
 The sun, moon, and monitor buttons select Light, Dark, and System and remember the choice when storage is
 available. Set `data-theme` on `<html>` to change the first-visit default, or remove it
 to use the system preference. Saved visitor preferences take precedence.
 
 Edit content in `index.html`, theme tokens at the top of `style.css`, and interactions
 in `script.js`. Navigation follows scrolling. The layout adapts to a compact top
-navigation on mobile and respects reduced-motion preferences. Projects can be
-filtered by topic; native expandable details work without JavaScript. Scroll reveals,
-reading progress, click ripples, hover responses, and pointer-driven illustration
-movement are progressive enhancements. Reduced motion disables visual animation.
+navigation on mobile and respects reduced-motion preferences.
+The sidebar arrow switches between the full sidebar and an icon rail on desktop;
+the choice is saved locally. On mobile the arrow hides or shows the navigation rows.
+Projects can be filtered by topic; native expandable details work without JavaScript. Scroll reveals,
+reading progress, click ripples, and hover responses are progressive enhancements.
+Reduced motion disables visual animation.
 
 The approved "Per aspera ad astra" logo is used for both the brand and browser favicon.
 `assets/logo-astra-dark.svg` uses off-white (#f0f3f8) and mint (#9de4cf).

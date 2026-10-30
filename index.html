@@ -15,9 +15,12 @@
   <div class="scroll-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
   <aside class="sidebar">
-    <a class="brand" href="#home" aria-label="Hadi Fouani home — Per aspera ad astra" title="Per aspera ad astra"><img id="brand-logo" src="assets/logo-astra-dark.svg" alt="" width="48" height="48"></a>
+    <div class="sidebar-header">
+      <a class="brand" href="#home" aria-label="Hadi Fouani home — Per aspera ad astra" title="Per aspera ad astra"><img id="brand-logo" src="assets/logo-astra-dark.svg" alt="" width="48" height="48"></a>
+      <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-label="Collapse sidebar" aria-expanded="true" aria-controls="sidebar-navigation" title="Collapse sidebar" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+    </div>
     <p class="sidebar-caption">A PERSONAL EXPLORATION</p>
-    <nav aria-label="Main navigation">
+    <nav id="sidebar-navigation" aria-label="Main navigation">
       <a class="nav-link active" href="#home" aria-current="location"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span class="nav-label">Overview</span><small>01</small></a>
       <a class="nav-link" href="#about"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span class="nav-label">About</span><small>02</small></a>
       <a class="nav-link" href="#work"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12a21 21 0 0 0 18 0M10 13v3h4v-3"/></svg><span class="nav-label">Experience</span><small>03</small></a>
@@ -42,28 +45,45 @@
 
   <main id="main">
     <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="topline"><span>HADI FOUANI / PORTFOLIO</span><span class="field-label"><i></i> AI & COMPUTER SCIENCE</span></div>
+      <div class="topline"><span>HADI FOUANI / PORTFOLIO</span></div>
       <div class="hero-layout">
         <div class="hero-copy">
-          <p class="eyebrow">BETWEEN THEORY & APPLICATION</p>
           <h1 id="hero-title">Hi, I'm<br><span>Hadi Fouani.</span></h1>
-          <p class="hero-role">A curious mind.<br>A computational lens.</p>
-          <p class="hero-description">Exploring artificial intelligence, machine learning, and the mathematical ideas behind them. From the foundations of computer science to questions that meet the real world.</p>
-          <div class="hero-actions"><a class="button" href="#projects">Explore my projects <span aria-hidden="true">↗</span></a><a class="button button--secondary" href="#contact">Let's connect <span aria-hidden="true">→</span></a></div>
+          <p class="hero-description">I'm a final-year engineering student, currently an AI Researcher Intern at Devoteam. My interests connect the structure of algorithms, the mathematics of randomness, and systems that learn.</p>
+          <div class="degree-track" aria-label="Current studies">
+            <a class="degree" href="https://www.usj.edu.lb/catalogues/2025/FIA-ESIB/17-ESIB-Diplomed%27ingenieurspecialiteGenieInformatiqueetCommunications.pdf" title="Computer and Communications Engineering — official program (PDF)"><span class="degree-level">ENGINEERING DEGREE</span><strong>Saint Joseph University of Beirut <span class="degree-arrow" aria-hidden="true">↗</span></strong></a>
+            <a class="degree" href="https://synapses.telecom-paris.fr/catalogue/2026-2027/diplome/4/ING-diplome-d-ingenieur" title="Télécom Paris engineering degree — official program"><span class="degree-level">ENGINEERING DEGREE</span><strong>Télécom Paris <span class="degree-arrow" aria-hidden="true">↗</span></strong></a>
+            <a class="degree degree--master" href="https://www.ip-paris.fr/en/education/masters/computer-science-program/major-foundations-computer-science-mpri" title="Foundations of Computer Science (MPRI) — official program"><span class="degree-level">M2 · FOUNDATIONS OF COMPUTER SCIENCE</span><strong>Institut Polytechnique de Paris <span class="degree-arrow" aria-hidden="true">↗</span></strong></a>
+          </div>
         </div>
-        <figure class="research-art" aria-label="An abstract network of connected points representing the connection between theory and application">
-          <div class="art-top"><span>FIG. 01</span><span>CONNECTED IDEAS</span></div>
-          <svg viewBox="0 0 360 380" fill="none" aria-hidden="true">
-            <defs><linearGradient id="network-color" x1="50" y1="60" x2="310" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#90b9ff"/><stop offset="1" stop-color="#6fe2c3"/></linearGradient></defs>
-            <g class="orbit-lines" stroke="currentColor" stroke-width="0.7"><ellipse cx="180" cy="190" rx="145" ry="145"/><ellipse cx="180" cy="190" rx="94" ry="145" transform="rotate(-35 180 190)"/><ellipse cx="180" cy="190" rx="58" ry="145" transform="rotate(40 180 190)"/><path d="M35 190h290M180 45v290" stroke-dasharray="3 6"/></g>
-            <g stroke="url(#network-color)" stroke-width="1.1"><path d="M83 105 165 83 259 123 287 217 230 292 129 277 68 205 83 105 230 292 165 83 68 205 259 123 129 277 83 105M68 205 287 217 165 83M129 277 287 217M259 123 230 292"/></g>
-            <g fill="url(#network-color)"><circle cx="83" cy="105" r="5"/><circle cx="165" cy="83" r="4"/><circle cx="259" cy="123" r="5"/><circle cx="287" cy="217" r="4"/><circle cx="230" cy="292" r="5"/><circle cx="129" cy="277" r="4"/><circle cx="68" cy="205" r="5"/></g>
-            <circle class="network-core" cx="180" cy="190" r="9" fill="#a3f0db"/><circle cx="180" cy="190" r="19" stroke="#a3f0db" stroke-opacity=".35"/>
-          </svg>
-          <figcaption><span>THEORY</span><span class="art-rule"></span><span>APPLICATION</span></figcaption>
-        </figure>
+        <aside class="overview-interests" aria-labelledby="overview-interests-title">
+          <h2 id="overview-interests-title">My interests</h2>
+          <a class="focus-row" href="#research">
+            <span class="focus-number" aria-hidden="true">01</span>
+            <div><h3>Structure &amp; optimization</h3><p>Theoretical computer science, graph algorithms, and mathematical optimization.</p></div>
+            <span class="focus-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="focus-row" href="#research">
+            <span class="focus-number" aria-hidden="true">02</span>
+            <div><h3>Randomness &amp; inference</h3><p>Probability and measure theory, stochastic processes and simulation, and statistical inference.</p></div>
+            <span class="focus-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="focus-row" href="#research">
+            <span class="focus-number" aria-hidden="true">03</span>
+            <div><h3>Learning &amp; generative AI</h3><p>Deep and reinforcement learning, language models, and retrieval-augmented generation.</p></div>
+            <span class="focus-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="overview-research-link" href="#research">Explore my research interests <span aria-hidden="true">→</span></a>
+        </aside>
       </div>
-      <div class="hero-footer"><span>Télécom Paris <b>/</b> MPRI</span><a href="#about">A little more about me <span aria-hidden="true">↓</span></a></div>
+      <div class="overview-journey" aria-labelledby="journey-title">
+        <h2 id="journey-title">My path so far</h2>
+        <ol class="journey-track">
+          <li><a class="journey-step" href="#work"><time class="journey-status" datetime="2023" aria-label="Started in 2023">2023</time><strong>Africell</strong><span>Optimization Intern</span></a></li>
+          <li><a class="journey-step" href="#work"><time class="journey-status" datetime="2026" aria-label="Started in 2026">2026</time><strong>INRIA</strong><span>Mathematical Modeling Intern</span></a></li>
+          <li><a class="journey-step journey-step--current" href="#work"><time class="journey-status" datetime="2026" aria-label="Started in 2026">2026</time><strong>Devoteam</strong><span>AI Researcher Intern</span></a></li>
+        </ol>
+      </div>
     </section>
 
     <section class="content-section" id="about" aria-labelledby="about-title">
