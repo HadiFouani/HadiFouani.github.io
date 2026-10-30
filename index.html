@@ -87,9 +87,52 @@
     </section>
 
     <section class="content-section" id="about" aria-labelledby="about-title">
-      <div class="section-heading"><p class="eyebrow">02 / THE BACKGROUND</p><h2 id="about-title">Grounded in theory.<br>Driven by curiosity.</h2></div>
-      <div class="about-grid"><div><p class="section-intro">My background connects engineering at Télécom Paris and ESIB–USJ with the MPRI Master's program in Foundations of Computer Science. I work across algorithms, optimization, probability, and artificial intelligence.</p><p class="section-intro">From Beirut to Paris, the common thread is curiosity about how mathematical ideas become useful computational tools.</p><div class="tags"><span>Python & C++</span><span>PyTorch</span><span>French · English · Arabic</span></div></div>
-      <div class="education"><article><span class="entry-label">2025–2026 / MASTER 2</span><h3>MPRI · IP Paris & ENS Paris</h3><p>Foundations of Computer Science · Algorithms & complexity</p></article><article><span class="entry-label">2024–2026 / ENGINEERING</span><h3>Télécom Paris</h3><p>Theoretical computer science, operations research, data science & AI</p></article><article><span class="entry-label">2020–2026 / ENGINEERING</span><h3>ESIB · Saint Joseph University of Beirut</h3><p>Computer & communications engineering · MPSI/MP preparatory studies</p></article></div></div>
+      <div class="section-heading">
+        <p class="eyebrow">02 / ACADEMIC BACKGROUND</p>
+        <h2 id="about-title">Education</h2>
+      </div>
+      <div class="education-list">
+        <article class="education-entry" aria-labelledby="mpri-institution">
+          <p class="education-degree"><span>2025–2026</span> M2 · Foundations of Computer Science (MPRI)</p>
+          <h3 id="mpri-institution">École polytechnique · ENS Paris · Université Paris Cité</h3>
+          <p class="education-affiliation">Enrolled at Institut Polytechnique de Paris</p>
+          <p class="education-description">A joint research master's run by Institut Polytechnique de Paris, Université Paris Cité, ENS Paris (Université PSL), and ENS Paris-Saclay (Université Paris-Saclay). The program combines advanced theoretical computer science and mathematical methods with a research internship.</p>
+          <a class="program-link" href="https://www.ip-paris.fr/en/education/masters/computer-science-program/major-foundations-computer-science-mpri">Official program <span aria-hidden="true">↗</span></a>
+          <details class="course-disclosure">
+            <summary aria-label="MPRI courses"><span>Courses</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></summary>
+            <ul class="course-list">
+              <!-- Add more courses as separate li elements. A project link is optional. -->
+              <li><span>Heuristic optimisation</span><a class="course-project-link" href="#project-evolutionary">Evolutionary optimization <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="education-entry" aria-labelledby="telecom-institution">
+          <p class="education-degree"><span>2024–2026</span> Engineering Degree</p>
+          <h3 id="telecom-institution">Télécom Paris</h3>
+          <p class="education-description">An engineering program centered on digital technologies, combining foundations in mathematics and computer science with networks, engineering sciences, and the social and economic dimensions of technology.</p>
+          <a class="program-link" href="https://synapses.telecom-paris.fr/catalogue/2025-2026/diplome/4/ING-diplome-d-ingenieur">Official program <span aria-hidden="true">↗</span></a>
+          <details class="course-disclosure">
+            <summary aria-label="Télécom Paris courses"><span>Courses</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></summary>
+            <ul class="course-list">
+              <!-- Add more courses as separate li elements. A project link is optional. -->
+              <li><span>Formal verification</span><a class="course-project-link" href="#project-tol">Timed Obstruction Logic <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="education-entry" aria-labelledby="usj-institution">
+          <p class="education-degree"><span>2020–2026</span> Engineering Degree · Computer &amp; Communications Engineering</p>
+          <h3 id="usj-institution">Saint Joseph University of Beirut <span class="education-shortname">/ ESIB</span></h3>
+          <p class="education-description">An engineering program that applies mathematics, science, and engineering methods to complex computer and communications systems. Technical study is complemented by design projects, experimentation, and professional experience, with pathways toward industry or further research.</p>
+          <a class="program-link" href="https://www.usj.edu.lb/catalogues/2025/FIA-ESIB/17-ESIB-Diplomed%27ingenieurspecialiteGenieInformatiqueetCommunications.pdf">Official program <span class="program-format">PDF</span> <span aria-hidden="true">↗</span></a>
+          <details class="course-disclosure">
+            <summary aria-label="USJ courses"><span>Courses</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></summary>
+            <!-- TODO: Replace this paragraph with a course-list when courses are ready. -->
+            <p class="courses-pending">Courses to be added.</p>
+          </details>
+        </article>
+      </div>
     </section>
 
     <section class="content-section" id="work" aria-labelledby="work-title">
@@ -107,8 +150,8 @@
       <div class="project-grid">
         <!-- TODO: Add the meme project's objective, role, methods, results, and repository when ready. -->
         <article class="project-card project-card--featured" data-category="ai"><div class="card-top"><span>01 / PROJECT IN PROGRESS</span><span class="project-index" aria-hidden="true">:)</span></div><h3>Meme understanding</h3><p>An ongoing project. Details will be added as the work develops.</p><p class="project-note">TODO — project description, methods, and results.</p><div class="tags"><span>In progress</span></div></article>
-        <article class="project-card" data-category="optimization"><div class="card-top"><span>02 / MPRI</span><span aria-hidden="true">↗</span></div><h3>Evolutionary optimization</h3><p>Designing and comparing evolutionary algorithms for submodular black-box optimization using IOHexperimenter.</p><details><summary>Explore the methods</summary><p>Compared RLS, (µ, λ)-EA, heavy-tailed mutation, crossover, and hybrid RLS–EA on combinatorial benchmarks. Built a reinforcement-learning agent to select hyperparameters automatically.</p></details><div class="tags"><span>Evolutionary algorithms</span><span>Reinforcement learning</span></div></article>
-        <article class="project-card" data-category="logic"><div class="card-top"><span>03 / TÉLÉCOM PARIS</span><span aria-hidden="true">⊨</span></div><h3>Timed Obstruction Logic</h3><p>Using formal reasoning to model cybersecurity scenarios and verify security policies.</p><details><summary>Explore the model</summary><p>Studied Timed Obstruction Logic, modeled an enterprise network as a weighted timed automaton, expressed attack scenarios and security policies as TOL formulas, and applied model checking.</p></details><div class="tags"><span>Formal verification</span><span>Cybersecurity</span></div></article>
+        <article class="project-card" id="project-evolutionary" data-category="optimization"><div class="card-top"><span>02 / MPRI</span><span aria-hidden="true">↗</span></div><h3>Evolutionary optimization</h3><p>Designing and comparing evolutionary algorithms for submodular black-box optimization using IOHexperimenter.</p><details><summary>Explore the methods</summary><p>Compared RLS, (µ, λ)-EA, heavy-tailed mutation, crossover, and hybrid RLS–EA on combinatorial benchmarks. Built a reinforcement-learning agent to select hyperparameters automatically.</p></details><div class="tags"><span>Evolutionary algorithms</span><span>Reinforcement learning</span></div></article>
+        <article class="project-card" id="project-tol" data-category="logic"><div class="card-top"><span>03 / TÉLÉCOM PARIS</span><span aria-hidden="true">⊨</span></div><h3>Timed Obstruction Logic</h3><p>Using formal reasoning to model cybersecurity scenarios and verify security policies.</p><details><summary>Explore the model</summary><p>Studied Timed Obstruction Logic, modeled an enterprise network as a weighted timed automaton, expressed attack scenarios and security policies as TOL formulas, and applied model checking.</p></details><div class="tags"><span>Formal verification</span><span>Cybersecurity</span></div></article>
         <article class="project-card" data-category="ai"><div class="card-top"><span>04 / ESIB–USJ</span><span aria-hidden="true">◎</span></div><h3>Attendance through computer vision</h3><p>An automated attendance system combining face recognition, image processing, and a mobile application.</p><details><summary>Explore the system</summary><p>Implemented preprocessing, detection, and feature extraction, with attendance export by email. The work was cited in <cite>Applications in Electronics Pervading Industry, Environment and Society</cite>.</p></details><div class="tags"><span>Computer vision</span><span>Mobile application</span></div></article>
       </div>
     </section>

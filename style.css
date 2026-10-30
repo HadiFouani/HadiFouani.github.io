@@ -115,11 +115,29 @@ h2 { font-size: clamp(30px, 3.4vw, 49px); font-weight: 550; letter-spacing: -.04
 h3 { font-size: 19px; line-height: 1.4; letter-spacing: -.02em; margin: 0 0 8px; font-weight: 550; }
 p { overflow-wrap: break-word; }
 .section-intro { font-size: 16px; line-height: 1.85; color: var(--muted); max-width: 55ch; }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 40px; }
-.about-grid > p { margin: 0; }
-.education article + article { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 24px; }
+.education-list { margin-top: 36px; }
+.education-entry { padding: 32px 0; border-top: 1px solid var(--line); }
+.education-degree { display: flex; flex-wrap: wrap; gap: 8px 16px; color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+.education-degree > span { color: var(--mint); font: 12px/1.8 ui-monospace, monospace; }
+.education-entry h3 { font-size: clamp(21px, 2.5vw, 28px); margin-bottom: 14px; }
+.education-shortname { color: var(--muted); font-size: .7em; font-weight: 400; white-space: nowrap; }
+.education-affiliation { color: var(--mint); font-size: 12px; margin: -4px 0 14px; }
+.education-description { color: var(--muted); font-size: 14px; line-height: 1.8; max-width: 82ch; margin: 0 0 14px; }
+.program-link { display: inline-flex; align-items: center; gap: 10px; color: var(--accent); font-size: 12px; min-height: 36px; }
+.program-link:hover { text-decoration: underline; text-underline-offset: .2em; }
+.program-format { padding: 1px 5px; border: 1px solid var(--line); border-radius: 4px; font: 9px ui-monospace, monospace; }
+.course-disclosure { margin: 18px 0 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.course-disclosure > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 18px; min-height: 48px; list-style: none; color: var(--text); font-size: 13px; }
+.course-disclosure > summary::-webkit-details-marker { display: none; }
+.course-disclosure > summary svg { width: 16px; height: 16px; fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: transform 180ms; }
+.course-disclosure[open] > summary svg { transform: rotate(90deg); }
+.course-list { list-style: none; padding: 0 18px; margin: 0; }
+.course-list > li { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.course-project-link { color: var(--accent); font-size: 12px; padding: 4px 0; }
+.course-project-link:hover { text-decoration: underline; text-underline-offset: .2em; }
+.course-project-link > span { margin-left: 8px; }
+.course-disclosure .courses-pending { color: var(--muted); font-size: 13px; padding: 0 18px 16px; margin: 0; }
 .entry-label { color: var(--mint); font: 9px ui-monospace, monospace; letter-spacing: .1em; display: block; margin-bottom: 12px; }
-.education p { color: var(--muted); font-size: 13px; margin: 0; }
 .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 35px; }
 .work-card { padding: 26px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
 .card-top { display: flex; justify-content: space-between; color: var(--muted); font: 9px ui-monospace, monospace; letter-spacing: .08em; }
@@ -153,6 +171,7 @@ p { overflow-wrap: break-word; }
 .project-filters button[aria-pressed="true"] { background: var(--active); color: var(--text); border-color: var(--art-line); }
 .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .project-card { padding: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.project-card:target { border-color: var(--mint); box-shadow: 0 0 0 2px var(--active); }
 .project-card .card-top { margin-bottom: 35px; min-height: 24px; align-items: center; }
 .project-card h3 { font-size: 24px; }
 .project-card p { font-size: 14px; color: var(--muted); }
@@ -256,7 +275,7 @@ footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12
   .hero-actions { gap: 10px; }
   .button { gap: 15px; padding: 12px 15px; font-size: 12px; }
   .content-section { padding: 65px 0; }
-  .about-grid, .work-grid, .project-grid, .experience-row { grid-template-columns: 1fr; gap: 24px; }
+  .work-grid, .project-grid, .experience-row { grid-template-columns: 1fr; gap: 24px; }
   .project-card { padding: 22px; }
   .interest-list summary { gap: 12px; }
   .interest-body { margin-left: 26px; margin-right: 0; }

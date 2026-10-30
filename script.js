@@ -115,22 +115,29 @@ updateNavigation();
 
 const filters = document.querySelector(".project-filters");
 const projectCards = Array.from(document.querySelectorAll(".project-card"));
+function setProjectFilter(category) {
+  filters?.querySelectorAll("button").forEach(option => option.setAttribute("aria-pressed", String(option.dataset.filter === category)));
+  let visible = 0;
+  projectCards.forEach(card => {
+    card.hidden = category !== "all" && card.dataset.category !== category;
+    if (!card.hidden) visible++;
+  });
+  const status = document.getElementById("project-status");
+  if (status) status.textContent = `${visible} ${visible === 1 ? "project" : "projects"} shown`;
+  queueNavigationUpdate();
+}
 if (filters) {
   filters.hidden = false;
-  filters.querySelectorAll("button").forEach(button => button.addEventListener("click", () => {
-    filters.querySelectorAll("button").forEach(option => option.setAttribute("aria-pressed", String(option === button)));
-    let visible = 0;
-    projectCards.forEach(card => {
-      card.hidden = button.dataset.filter !== "all" && card.dataset.category !== button.dataset.filter;
-      if (!card.hidden) visible++;
-    });
-    document.getElementById("project-status").textContent = `${visible} ${visible === 1 ? "project" : "projects"} shown`;
-    queueNavigationUpdate();
-  }));
+  filters.querySelectorAll("button").forEach(button => button.addEventListener("click", () => setProjectFilter(button.dataset.filter)));
 }
+document.querySelectorAll(".course-project-link").forEach(link => link.addEventListener("click", () => {
+  // Reveal a filtered-out project before the browser follows the course anchor.
+  const target = document.querySelector(link.getAttribute("href"));
+  if (target?.hidden) setProjectFilter("all");
+}));
 
 // Content is visible by default; animation is a progressive enhancement.
-const revealTargets = document.querySelectorAll(".section-heading, .about-grid, .work-card, .project-card, .experience-row, .interest-list, .reading-entry");
+const revealTargets = document.querySelectorAll(".section-heading, .education-entry, .work-card, .project-card, .experience-row, .interest-list, .reading-entry");
 let revealObserver;
 if ("IntersectionObserver" in window && !reducedMotion.matches) {
   revealObserver = new IntersectionObserver(entries => {

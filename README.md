@@ -31,6 +31,24 @@ Projects can be filtered by topic; native expandable details work without JavaSc
 reading progress, click ripples, and hover responses are progressive enhancements.
 Reduced motion disables visual animation.
 
+## Edit education and courses
+
+The `#about` section has one `.education-entry` per program, with dates, degree,
+institution, a brief summary, and an official program link. Summaries are paraphrased
+from the linked program descriptions. The previous personal introduction and badges
+have been removed from this section.
+
+Each entry has a native `<details class="course-disclosure">` for Courses. Add a
+`<li><span>Course name</span></li>` inside its `.course-list`; an optional
+`<a class="course-project-link" href="#project-id">Project name</a>` can follow the
+course name within that same list item. For USJ, replace `.courses-pending` with a
+`<ul class="course-list">` when ready.
+
+Only two courses are populated: MPRI's Heuristic optimisation links to
+`#project-evolutionary`, and Télécom Paris's Formal verification links to `#project-tol`.
+Following these links reveals the destination if a project filter has hidden it.
+All other courses are left for the owner to add.
+
 The approved "Per aspera ad astra" logo is used for both the brand and browser favicon.
 `assets/logo-astra-dark.svg` uses off-white (#f0f3f8) and mint (#9de4cf).
 `assets/logo-astra-light.svg` uses navy (#172334) and deep teal (#216e60).
