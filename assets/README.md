@@ -1,6 +1,10 @@
 # Portfolio assets
 
-`logo.svg` is an abstract orbit-and-node symbol shared by the sidebar and browser favicon.
+`logo-astra-dark.svg` and `logo-astra-light.svg` are the active sidebar and favicon
+variants. Both retain the transparent silhouette of `logo-per-aspera-ad-astra.png`,
+embedded as an alpha mask. The dark variant is off-white/mint; the light variant is
+navy/deep teal. Theme selection switches both the brand and favicon automatically.
+Earlier logo concepts and the light-tile wrapper are retained but not referenced by the page.
 
 Optional future files:
 

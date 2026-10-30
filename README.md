@@ -8,7 +8,7 @@ Personal portfolio for AI, machine learning, and computer science, hosted on Git
 index.html     Content, projects, research interests, readings, and navigation
 style.css      Responsive layout, dark/light themes, and animations
 script.js      Appearance, project filters, scroll/click motion, and navigation
-assets/        Abstract orbit logo/favicon and future images (see assets/README.md)
+assets/        Per aspera ad astra logo/favicon and future images (see assets/README.md)
 ```
 
 Open `index.html` in a browser to preview locally. No build or dependencies required.
@@ -26,7 +26,15 @@ filtered by topic; native expandable details work without JavaScript. Scroll rev
 reading progress, click ripples, hover responses, and pointer-driven illustration
 movement are progressive enhancements. Reduced motion disables visual animation.
 
-The abstract orbit symbol in `assets/logo.svg` is used for both the brand and the browser favicon.
+The approved "Per aspera ad astra" logo is used for both the brand and browser favicon.
+`assets/logo-astra-dark.svg` uses off-white (#f0f3f8) and mint (#9de4cf).
+`assets/logo-astra-light.svg` uses navy (#172334) and deep teal (#216e60).
+Both are transparent, self-contained SVGs using the original PNG silhouette as an
+alpha mask to preserve its exact shape. `applyTheme()` switches both the brand and
+favicon, including when the system preference changes in System mode.
+The winding ascent and star symbolize perseverance and aspiration. Hover over
+the brand for the motto.
+Navigation uses matching SVG line icons with centered labels between icons and numbers.
 The contact section links only to LinkedIn; GitHub remains a code link in the sidebar.
 No email address or phone number is embedded
 in the page. The supplied CV was used for content, not copied to public assets.
