@@ -44,10 +44,19 @@ Each entry has a native `<details class="course-disclosure">` for Courses. Add a
 course name within that same list item. For USJ, replace `.courses-pending` with a
 `<ul class="course-list">` when ready.
 
-Only two courses are populated: MPRI's Heuristic optimisation links to
-`#project-evolutionary`, and Télécom Paris's Formal verification links to `#project-tol`.
+MPRI's Solving optimisation problems with search heuristics links to `#project-evolutionary`, and Télécom Paris's
+Formal verification links to `#project-tol`. MPRI also lists Reinforcement learning
+as an external course from the IASD – PSL Master's degree, linking to its official
+website using `.course-program-link`.
+Télécom Paris's Research and Innovation Project links to `#project-meme-understanding`.
 Following these links reveals the destination if a project filter has hidden it.
-All other courses are left for the owner to add.
+The MPRI list includes ten program courses and the external Reinforcement learning
+course. Four courses link to their associated papers on arXiv: approximation
+algorithms (bootstrapping in circuits), foundations of network models (stochastic
+shortest paths), parameterized algorithms and complexity (undirected Hamiltonicity),
+and probability and algorithmic applications (the Johnson-Lindenstrauss lemma).
+These `.course-paper-link` links point to the papers, rather than presentation files.
+USJ courses are left for the owner to add.
 
 The approved "Per aspera ad astra" logo is used for both the brand and browser favicon.
 `assets/logo-astra-dark.svg` uses off-white (#f0f3f8) and mint (#9de4cf).

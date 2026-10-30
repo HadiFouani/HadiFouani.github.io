@@ -133,9 +133,10 @@ p { overflow-wrap: break-word; }
 .course-disclosure[open] > summary svg { transform: rotate(90deg); }
 .course-list { list-style: none; padding: 0 18px; margin: 0; }
 .course-list > li { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; border-top: 1px solid var(--line); font-size: 14px; }
-.course-project-link { color: var(--accent); font-size: 12px; padding: 4px 0; }
-.course-project-link:hover { text-decoration: underline; text-underline-offset: .2em; }
-.course-project-link > span { margin-left: 8px; }
+.course-project-link, .course-program-link, .course-paper-link { color: var(--accent); font-size: 12px; padding: 4px 0; }
+.course-project-link:hover, .course-program-link:hover, .course-paper-link:hover { text-decoration: underline; text-underline-offset: .2em; }
+.course-project-link > span, .course-program-link > span, .course-paper-link > span { margin-left: 8px; }
+.course-origin { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; }
 .course-disclosure .courses-pending { color: var(--muted); font-size: 13px; padding: 0 18px 16px; margin: 0; }
 .entry-label { color: var(--mint); font: 9px ui-monospace, monospace; letter-spacing: .1em; display: block; margin-bottom: 12px; }
 .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 35px; }
