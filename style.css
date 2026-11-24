@@ -68,10 +68,9 @@ main { margin-left: var(--sidebar-width); padding: 0 clamp(28px, 5vw, 88px); max
 h1 { font-size: clamp(48px, min(5vw, 8.5svh), 80px); line-height: 1.06; letter-spacing: -.06em; font-weight: 650; margin: 0 0 18px; }
 h1 span { display: inline-block; padding-inline-end: .12em; margin-inline-end: -.12em; background: linear-gradient(110deg, var(--text) 8%, var(--accent) 75%); background-clip: text; -webkit-background-clip: text; color: transparent; }
 .hero-description { color: var(--muted); font-size: 15px; max-width: 49ch; margin: 0; line-height: 1.7; }
-.degree-track { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; margin-top: 20px; }
-.degree--master { grid-column: 1 / -1; }
+.degree-track { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; gap: 16px; margin-top: 20px; }
 .degree { display: flex; flex-direction: column; gap: 7px; min-height: 44px; padding-left: 14px; border-left: 2px solid var(--art-line); transition: border-color 180ms; }
-.degree:last-child { border-color: var(--mint); }
+.degree--master { border-color: var(--mint); }
 .degree-level { color: var(--muted); font: 8px/1.7 ui-monospace, monospace; letter-spacing: .06em; }
 .degree strong { font-size: 14px; font-weight: 550; line-height: 1.45; }
 .degree-arrow { display: inline-block; color: var(--accent); font-size: .85em; transition: transform 180ms; }
