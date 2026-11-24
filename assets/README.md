@@ -6,6 +6,18 @@ embedded as an alpha mask. The dark variant is off-white/mint; the light variant
 navy/deep teal. Theme selection switches both the brand and favicon automatically.
 Earlier logo concepts and the light-tile wrapper are retained but not referenced by the page.
 
+## Internship wordmarks
+
+Section 03 uses transparent company silhouettes, recolored through CSS masks with
+the portfolio's text, mint, and accent tokens. Light, Dark, and System all use the
+same local assets; no third-party requests are made by visitors.
+
+- `devoteam.svg`: [official Devoteam vector](https://www.devoteam.com/wp-content/themes/lsac-devoteam/assets/images/logo-devoteam.svg).
+- `inria.svg`: wordmark path extracted from [Inria's official logo](https://www.inria.fr/themes/custom/inria/logo/logo.svg), without its surrounding institutional lockup/background.
+- `africell-group.png`: [transparent Africell wordmark from its official Gambia website](https://www.africell.gm/wp-content/uploads/2019/12/africellLogo_777x237_white.png), displayed on the Africell Group internship slide.
+
+These are portfolio color adaptations, not official brand-color variants.
+
 Optional future files:
 
 - `profile.jpg` — your profile photo.

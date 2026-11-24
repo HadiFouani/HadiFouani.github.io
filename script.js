@@ -136,6 +136,54 @@ document.querySelectorAll(".course-project-link").forEach(link => link.addEventL
   if (target?.hidden) setProjectFilter("all");
 }));
 
+const experienceTrack = document.getElementById("experience-track");
+if (experienceTrack) {
+  const slides = Array.from(experienceTrack.children);
+  const dots = Array.from(document.querySelectorAll("[data-experience-slide]"));
+  const arrows = Array.from(document.querySelectorAll("[data-experience-step]"));
+  const status = document.getElementById("experience-status");
+  let activeSlide = 0;
+  let scrollFrame;
+  document.querySelector(".experience-controls").hidden = false;
+  function slideLeft(index) {
+    return slides[index].getBoundingClientRect().left - experienceTrack.getBoundingClientRect().left + experienceTrack.scrollLeft;
+  }
+  function showExperience(index) {
+    const next = Math.max(0, Math.min(slides.length - 1, index));
+    experienceTrack.scrollTo({ left: slideLeft(next), behavior: reducedMotion.matches ? "instant" : "smooth" });
+  }
+  function updateExperience() {
+    const closest = slides.reduce((best, slide, index) => Math.abs(slideLeft(index) - experienceTrack.scrollLeft) < Math.abs(slideLeft(best) - experienceTrack.scrollLeft) ? index : best, 0);
+    const changed = closest !== activeSlide;
+    activeSlide = closest;
+    dots.forEach((dot, index) => {
+      if (index === activeSlide) dot.setAttribute("aria-current", "true");
+      else dot.removeAttribute("aria-current");
+    });
+    arrows.forEach(button => button.disabled = Number(button.dataset.experienceStep) < 0 ? activeSlide === 0 : activeSlide === slides.length - 1);
+    if (changed) status.textContent = slides[activeSlide].getAttribute("aria-label");
+    scrollFrame = null;
+  }
+  dots.forEach(button => button.addEventListener("click", () => showExperience(Number(button.dataset.experienceSlide))));
+  arrows.forEach(button => button.addEventListener("click", () => showExperience(activeSlide + Number(button.dataset.experienceStep))));
+  experienceTrack.addEventListener("scroll", () => {
+    if (!scrollFrame) scrollFrame = requestAnimationFrame(updateExperience);
+  }, { passive: true });
+  experienceTrack.addEventListener("keydown", event => {
+    if (event.target !== experienceTrack) return;
+    const destinations = { ArrowLeft: activeSlide - 1, ArrowRight: activeSlide + 1, Home: 0, End: slides.length - 1 };
+    if (event.key in destinations) {
+      event.preventDefault();
+      showExperience(destinations[event.key]);
+    }
+  });
+  // Native horizontal wheel/touch scrolling preserves trackpad momentum and page scrolling.
+  if ("ResizeObserver" in window) new ResizeObserver(() => {
+    experienceTrack.scrollTo({ left: slideLeft(activeSlide), behavior: "instant" });
+  }).observe(experienceTrack);
+  updateExperience();
+}
+
 // Content is visible by default; animation is a progressive enhancement.
 const revealTargets = document.querySelectorAll(".section-heading, .education-entry, .work-card, .project-card, .experience-row, .interest-list, .reading-entry");
 let revealObserver;

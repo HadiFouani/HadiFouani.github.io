@@ -85,3 +85,12 @@ Find `id="readings"` in `index.html`. Each book or paper is one clearly spaced
 remove a reading. Edit its category, title (`<cite>`), optional author, and description
 (`p`). The six entries include your five selections and the TOL paper from your CV.
 Descriptions are brief topic labels, not claims that you finished a reading.
+
+## Experience carousel
+
+Section 03 contains three internship slides: Devoteam, Inria, and Africell Group.
+Add details at each slide's TODO in `index.html`. Native horizontal scrolling supports
+trackpad and touch gestures, with scroll snapping, dots, and previous/next buttons.
+Focus the carousel for Left/Right and Home/End keys. Reduced-motion preferences
+disable animated navigation. No autoplay or play button is used. Company wordmarks
+follow the active theme using CSS masks; sources are listed in `assets/README.md`.
