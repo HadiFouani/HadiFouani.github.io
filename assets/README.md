@@ -18,14 +18,14 @@ same local assets; no third-party requests are made by visitors.
 
 These are portfolio color adaptations, not official brand-color variants.
 
-Optional future files:
+## Institution emblems
 
-- `profile.jpg` — your profile photo.
-- `project1.png` — your first project image; add more project images as needed.
-- `cv.pdf` — a public version of your CV, if you choose to provide one.
+The overview places each emblem in a matching 48 × 48 transparent area before the
+institution's text, with no added frames. `applyTheme` switches images marked with
+`data-logo-light` and `data-logo-dark`, including the System appearance setting.
 
-The supplied CV contains personal contact information and has not been copied here.
-Photo and project images have not been supplied. The page does not reference
-these optional files until they are added, so visitors will not see broken images or links.
-Once available, reference them as `assets/profile.jpg`, `assets/project1.png`,
-and `assets/cv.pdf` from `index.html`.
+- `ip-paris-light.svg` / `ip-paris-dark.svg`: sharp black/white vector circle from the [official IP Paris horizontal web pack](https://www.ip-paris.fr/sites/default/files/Charte%20Graphique%202025/LOGOTYPE_IP-PARIS_HORIZONTAL_WEB.zip).
+- `telecom-paris-light.svg` / `telecom-paris-dark.svg`: adapted official inline vector from [Télécom Paris](https://www.telecom-paris.fr/). The approved two-panel design is retained: black upper panel and light burgundy in light mode, white upper panel and dark burgundy in dark mode. Only the added external frame is removed.
+- `usj-symbol.svg`: original blue, gold-grey, and white tree emblem for both themes, cropped from the [official USJ logo](https://usj.edu.lb/sites/usj/files/logos/white/FR/USJ.png). The original is retained because the recolored trial reduced its identity. Source retained as `usj.png`.
+
+The USJ SVG embeds its source image; visitors make no remote logo requests.

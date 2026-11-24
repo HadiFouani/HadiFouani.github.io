@@ -13,6 +13,9 @@ function applyTheme(theme) {
   else document.documentElement.dataset.theme = theme;
   themeButtons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme)));
   const isDark = theme === "dark" || (theme === "system" && systemTheme.matches);
+  document.querySelectorAll("[data-logo-light][data-logo-dark]").forEach(logo => {
+    logo.src = isDark ? logo.dataset.logoDark : logo.dataset.logoLight;
+  });
   document.querySelector('meta[name="theme-color"]')?.setAttribute("content", isDark ? "#0c1016" : "#f6f8fb");
   const logoSource = `assets/logo-astra-${isDark ? "dark" : "light"}.svg`;
   document.getElementById("brand-logo")?.setAttribute("src", logoSource);
